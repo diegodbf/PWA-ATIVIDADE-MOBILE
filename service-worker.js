@@ -1,9 +1,10 @@
+var cache = 'pwa-cache';
 self.addEventListener('install', function(event) {
 	event.waitUntil(
 		caches
 			.open('pwa-cache')
 			.then(function(cache) {
-				return cache.addAll('index.html',
+				return cache.add('index.html',
 				'./assets/css/main.css',
 				'./assets/css/noscript.css',
 				'./assets/js/breakpoints.min.js',
@@ -33,5 +34,3 @@ self.addEventListener('fetch', function(event) {
 			})
 	);
 });
-
-

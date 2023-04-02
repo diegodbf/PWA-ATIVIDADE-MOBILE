@@ -401,7 +401,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body >
 
-	<script> 
-				navigator.serviceWorker.register('service-worker.js')
-	</script>
+<script>
+	if ('serviceWorker' in navigator) {
+	navigator.serviceWorker
+	  .register('/service-worker.js')
+	  .then(serviceWorker => {
+		console.log('Service Worker registered: ' + serviceWorker);
+	  })
+	  .catch(error => {
+		console.log('Error registering the Service Worker: ' + error);
+	  });
+  }
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.8/pwacompat.min.js"
+    integrity="sha384-uONtBTCBzHKF84F6XvyC8S0gL8HTkAPeCyBNvfLfsqHh+Kd6s/kaS4BdmNQ5ktp1"
+    crossorigin="anonymous"></script>
 </html>

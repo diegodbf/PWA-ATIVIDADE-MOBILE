@@ -770,3 +770,5 @@ function fecharNav(){
 function vibrateSimple() {
 	navigator.vibrate(200);
   }
+
+  

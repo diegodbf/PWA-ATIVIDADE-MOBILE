@@ -12,7 +12,8 @@
     {
       "src": "android/android-launchericon-192-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "android/android-launchericon-144-144.png",
@@ -39,6 +40,20 @@
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#31506F",
-  "theme_color": "#4D5360"
+  "theme_color": "#4D5360",
+  "prefer_related_applications": false,
+  "description": "descrição qualquer fodase",
+  "scope": ".",
+  "minimal-ui":"true",
+  "browser": "default",
+  "orientation": "any",
   
-}
+  }
+  
+  
+
+
+
+
+
+
