@@ -16,11 +16,7 @@
 
 		<link rel="manifest" href="manifest.json">
 
-		<script> 
-			if ('serviceWorker' in navegator) {
-					navigator.serviceWorker.register('service-worker.js')
-			}
-		</script>
+		
 	</head>
 	<body class="is-preload">
 		<pwa-install id="installComponent"></pwa-install>
@@ -404,4 +400,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			
 
 	</body >
+
+	<script> 
+		if ('serviceWorker' in navegator) {
+				navigator.serviceWorker.register('service-worker.js')
+		}
+	</script>
 </html>

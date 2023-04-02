@@ -3,7 +3,7 @@ self.addEventListener('install', function(event) {
 		caches
 			.open('pwa-cache')
 			.then(function(cache) {
-				return cache.add('index.html',
+				return cache.addAll('index.html',
 				'./assets/css/main.css',
 				'./assets/css/noscript.css',
 				'./assets/js/breakpoints.min.js',
