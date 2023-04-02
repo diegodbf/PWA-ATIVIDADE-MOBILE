@@ -767,3 +767,6 @@ function abrirNav(){
 function fecharNav(){
 	document.getElementById("mynav").style.width = "0%";
 }
+function vibrateSimple() {
+	navigator.vibrate(200);
+  }
