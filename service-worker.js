@@ -1,4 +1,15 @@
-var cacheName = 'pwaTeste+-v1.2';
+var cacheName = 'cache_fintech_pwa';
+
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js ');
+
+workbox.routing.registerRoute(
+  new RegExp('index.html'),
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: CACHE
+  })
+);
+
+
 
 self.addEventListener('install', event => {
 
@@ -10,29 +21,34 @@ self.addEventListener('install', event => {
 
         './index.html',
 
-        './assets/css/bootstrap.min.css',
+        './assets/css/main.css',
 
-        './assets/js/bootstrap.min.js',
+        './assets/css/noscript.css',
+
+        './assets/js/breakpoints.min.js',
+
+        './assets/js/browser.min.js',
 
         './assets/js/jquery.min.js',
 
-        './assets/js/popper.min.js',
+        './assets/js/main.js',
 
-        './assets/img/background.png',
-        './assets/img/favicon.png',
-        './assets/img/logo.png',
-        './assets/img/icon_128.png',
-        './assets/img/icon_144.png',
-        './assets/img/icon_152.png',
-        './assets/img/icon_167.png',
-        './assets/img/icon_180.png',
-        './assets/img/icon_192.png',
-        './assets/img/icon_256.png',
-        './assets/img/icon_512.png',
-        './assets/img/formulas.JPG',
+        './assets/images/hands-on-desk-at-meeting.jpg',
+        './assets/images/smiling-man-woman-pug.jpg',
+        './assets/images/there-she-goes.jpg',
+
+        './assets/images/icones/android-launchericon-48-48',
+        './assets/images/icones/android-launchericon-72-72',
+        './assets/images/icones/android-launchericon-96-96',
+        './assets/images/icones/android-launchericon-144-144',
+        './assets/images/icones/android-launchericon-192-192',
+        './assets/images/icones/android-launchericon-512-512',
+
       ]))
   );
 });
+
+navigator.vibrate(200);
 
 self.addEventListener('message', function (event) {
   if (event.data.action === 'skipWaiting') {
