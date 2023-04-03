@@ -771,4 +771,6 @@ function vibrateSimple() {
 	navigator.vibrate(200);
   }
 
-  
+  function vibrateSimple() {
+	navigator.vibrate(200);
+  }
