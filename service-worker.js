@@ -3,7 +3,7 @@ self.addEventListener('install', function(event) {
 		caches
 			.open('pwa-cache')
 			.then(function(cache) {
-				return cache.addAll('index.html',
+				return cache.add('index.html',
 				'./assets/css/main.css',
 				'./assets/css/noscript.css',
 				'./assets/js/breakpoints.min.js',
@@ -18,7 +18,7 @@ self.addEventListener('install', function(event) {
 				'./assets/images/icones/android-launchericon-96-96',
 				'./assets/images/icones/android-launchericon-144-144',
 				'./assets/images/icones/android-launchericon-192-192',
-				'./assets/images/icones/android-launchericon-512-512',
+				'./assets/images/icones/android-launchericon-512-512'
 								);
 			})
 	);
